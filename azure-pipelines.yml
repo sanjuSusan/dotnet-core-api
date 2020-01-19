@@ -34,7 +34,5 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    # dotnet restore TodoApi.csproj
-    # dotnet build TodoApi.csproj -c Release -o /app
-    # dotnet publish TodoApi.csproj -c Release -o /app
+    dotnet nuget push --source "dotnet-demo-feed" --api-key az /app
   displayName: 'Run a multi-line script'
