@@ -19,7 +19,6 @@ steps:
     command: restore
     projects: '**/*.csproj'
     feedsToUse: config
-    nugetConfigPath: NuGet.config    # Relative to root of the repository
 
 # ...
 - script: |
