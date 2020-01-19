@@ -25,11 +25,16 @@ steps:
     projects: 'TodoApi.csproj'
     arguments: '-c Release -o /app'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    projects: 'TodoApi.csproj'
+    arguments: '-c Release -o /app'
 # ...
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     # dotnet restore TodoApi.csproj
     # dotnet build TodoApi.csproj -c Release -o /app
-    dotnet publish TodoApi.csproj -c Release -o /app
+    # dotnet publish TodoApi.csproj -c Release -o /app
   displayName: 'Run a multi-line script'
